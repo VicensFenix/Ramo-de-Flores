@@ -1,0 +1,394 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.bouquet-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 100;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    position: relative;
+    max-width: 80%;
+}
+
+.background-night {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    z-index: -1;
+}
+
+/* Contenedor del ramo */
+.bouquet-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    z-index: 10;
+}
+
+/* Base del ramo */
+.bouquet-base {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    bottom: 0;
+    filter: blur(5px);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* Papel de envolver el ramo */
+.bouquet-wrapper {
+    position: absolute;
+    width: 220px;
+    height: 180px;
+    background: linear-gradient(to bottom, #f9f3f3, #e6d8d8);
+    border-radius: 10px 10px 50% 50%;
+    bottom: 20px;
+    z-index: 2;
+    transform: perspective(300px) rotateX(20deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bouquet-wrapper-fold {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: #f0e0e0;
+    top: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Grupo de rosas */
+.roses-group {
+    position: absolute;
+    bottom: 50px;
+    width: 180px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+/* Estilos para las rosas */
+.rose {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.rose--red .rose__petal {
+    background-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+}
+
+.rose--white .rose__petal {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.rose__petals {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.rose__petal {
+    position: absolute;
+    width: 35px;
+    height: 45px;
+    border-radius: 50% 50% 50% 50%;
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+}
+
+.rose__petal--1 {
+    transform: rotate(0deg) translateY(-15px);
+}
+
+.rose__petal--2 {
+    transform: rotate(90deg) translateY(-15px);
+}
+
+.rose__petal--3 {
+    transform: rotate(180deg) translateY(-15px);
+}
+
+.rose__petal--4 {
+    transform: rotate(270deg) translateY(-15px);
+}
+
+.rose__center {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    box-shadow: 0 0 8px #f1c40f;
+    z-index: 2;
+}
+
+.rose__highlight {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.rose__highlight--1 {
+    width: 8px;
+    height: 8px;
+    top: 10px;
+    left: 10px;
+}
+
+.rose__highlight--2 {
+    width: 6px;
+    height: 6px;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Tallos y hojas */
+.rose__stem {
+    position: relative;
+    width: 5px;
+    height: 120px;
+    background: linear-gradient(to right, #2e8b57, #3cb371);
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.rose__leaf {
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    background-color: #2e8b57;
+    border-radius: 50% 0 50% 0;
+    z-index: 2;
+}
+
+.rose__leaf--1 {
+    top: 30px;
+    left: -20px;
+    transform: rotate(-30deg);
+}
+
+.rose__leaf--2 {
+    top: 70px;
+    right: -20px;
+    transform: rotate(30deg) scaleX(-1);
+}
+
+/* Posicionamiento de las rosas */
+.rose--1 {
+    left: 30px;
+    bottom: 50px;
+    transform: rotate(-10deg);
+    z-index: 6;
+}
+
+.rose--2 {
+    left: 90px;
+    bottom: 70px;
+    transform: rotate(5deg);
+    z-index: 7;
+}
+
+.rose--3 {
+    right: 30px;
+    bottom: 60px;
+    transform: rotate(10deg);
+    z-index: 6;
+}
+
+.rose--4 {
+    left: 60px;
+    bottom: 90px;
+    transform: rotate(-5deg);
+    z-index: 5;
+}
+
+.rose--5 {
+    right: 70px;
+    bottom: 80px;
+    transform: rotate(15deg);
+    z-index: 4;
+}
+
+.rose--6 {
+    left: 40px;
+    bottom: 110px;
+    transform: rotate(-15deg);
+    z-index: 4;
+}
+
+/* Follaje del ramo */
+.bouquet-foliage {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 250px;
+    z-index: 3;
+}
+
+.foliage {
+    position: absolute;
+    background-color: #3cb371;
+    border-radius: 50% 0 50% 0;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.foliage--1 {
+    width: 80px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(-20deg);
+}
+
+.foliage--2 {
+    width: 70px;
+    height: 40px;
+    bottom: 30px;
+    right: 30px;
+    transform: rotate(25deg);
+}
+
+.foliage--3 {
+    width: 60px;
+    height: 35px;
+    bottom: 60px;
+    left: 10px;
+    transform: rotate(-40deg);
+}
+
+.foliage--4 {
+    width: 50px;
+    height: 30px;
+    bottom: 70px;
+    right: 20px;
+    transform: rotate(35deg);
+}
+
+/* Cinta del ramo */
+.bouquet-ribbon {
+    position: absolute;
+    bottom: 180px;
+    width: 100%;
+    z-index: 8;
+}
+
+.ribbon {
+    background-color: #e74c3c;
+    position: absolute;
+}
+
+.ribbon--main {
+    width: 120px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ribbon--bow {
+    width: 60px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+}
+
+.bow-loop {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    background-color: #c0392b;
+    border-radius: 50%;
+}
+
+.bow-loop--left {
+    left: 0;
+    transform: rotate(-30deg);
+}
+
+.bow-loop--right {
+    right: 0;
+    transform: rotate(30deg);
+}
+
+.bow-center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Animaciones */
+.rose:hover .rose__petal--1 {
+    transform: rotate(-10deg) translateY(-15px);
+}
+
+.rose:hover .rose__petal--2 {
+    transform: rotate(80deg) translateY(-15px);
+}
+
+.rose:hover .rose__petal--3 {
+    transform: rotate(190deg) translateY(-15px);
+}
+
+.rose:hover .rose__petal--4 {
+    transform: rotate(260deg) translateY(-15px);
+}
+
+/* Efecto de brillo en las rosas blancas */
+.rose--white .rose__petals::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rose--white:hover .rose__petals::after {
+    opacity: 1;
+}
