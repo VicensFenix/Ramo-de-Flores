@@ -201,7 +201,7 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    color: #ff00b3;
+    color: #a30fd4;
     box-shadow: 0 0 10px #ff00b3, 0 0 20px #ff00b3 inset;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -209,7 +209,7 @@ body {
 
 .btn:hover {
     background-color: #d41515;
-    color: #890fd5;
+    color: #e432c9;
     box-shadow: 0 0 20px #d41515, 0 0 30px #d41515 inset;
 }
 
