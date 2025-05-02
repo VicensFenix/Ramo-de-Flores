@@ -27,7 +27,7 @@ body {
     opacity: 0.2;
     animation: shine 2s infinite;
     display: inline-block;
-    color: #ffc107;
+    color: #ff28f4;
     text-shadow: 0 0 10px #ffc107;
 }
 
@@ -51,7 +51,7 @@ body {
 
 @keyframes shine {
     0%, 100% { opacity: 0.2; text-shadow: 0 0 10px transparent; }
-    50% { opacity: 1; text-shadow: 0 0 20px #d900ff, 0 0 30px #ff3baa; }
+    50% { opacity: 1; text-shadow: 0 0 20px #e1bb1f, 0 0 30px #920df2; }
 }
 
 /* Contenedor aviso con efecto "ola" */
@@ -62,7 +62,7 @@ body {
 
 .minexpresion {
     font-size: 1.8rem;
-    color: #9325d3;
+    color: #dcdc12;
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
