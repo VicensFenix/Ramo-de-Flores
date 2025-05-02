@@ -5,68 +5,68 @@ body {
     background: #000; /* fondo oscuro para resaltar la flor */
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
-  }
-  
-  /* Estilo para el contenedor principal */
-  .container {
+}
+
+/* Estilo para el contenedor principal */
+.container {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-  }
-  
-  /* Estilo del título */
-  .titulo {
+}
+
+/* Estilo del título */
+.titulo {
     color: #d53bff;
     text-align: center;
     padding: 2rem;
     font-size: 1.5rem;
-  }
-  
-  /* Noche y cielo */
-  .night {
+}
+
+/* Noche y cielo */
+.night {
     position: absolute;
     width: 100%;
     height: 100%;
     background: radial-gradient(ellipse at bottom, #000 0%, #020202 100%);
     z-index: 0;
-  }
-  
-  /* ROSA */
-  .rosas {
+}
+
+/* ROSA */
+.rosas {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  /* Cada rosa */
-  .rosa {
+}
+
+/* Cada rosa */
+.rosa {
     position: relative;
     display: inline-block;
     margin: 0 1rem;
     animation: aparecer 2s ease-in-out;
-  }
-  
-  @keyframes aparecer {
+}
+
+@keyframes aparecer {
     0% {
-      transform: scale(0) translateY(50%);
-      opacity: 0;
+        transform: scale(0) translateY(50%);
+        opacity: 0;
     }
     100% {
-      transform: scale(1) translateY(0);
-      opacity: 1;
+        transform: scale(1) translateY(0);
+        opacity: 1;
     }
-  }
-  
-  /* Pétalos */
-  .rosa__petalos {
+}
+
+/* Pétalos */
+.rosa__petalos {
     position: relative;
     width: 100px;
     height: 100px;
-  }
-  
-  .rosa__petalo {
+}
+
+.rosa__petalo {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -74,20 +74,20 @@ body {
     border-radius: 50%;
     animation: petalo 2s ease-in-out infinite alternate;
     opacity: 0.9;
-  }
-  
-  .rosa__petalo--1 { top: 0; left: 20px; }
-  .rosa__petalo--2 { top: 20px; left: 0; }
-  .rosa__petalo--3 { top: 20px; left: 40px; }
-  .rosa__petalo--4 { top: 40px; left: 20px; }
-  
-  @keyframes petalo {
+}
+
+.rosa__petalo--1 { top: 0; left: 20px; }
+.rosa__petalo--2 { top: 20px; left: 0; }
+.rosa__petalo--3 { top: 20px; left: 40px; }
+.rosa__petalo--4 { top: 40px; left: 20px; }
+
+@keyframes petalo {
     from { transform: scale(1); }
     to { transform: scale(1.05) rotate(2deg); }
-  }
-  
-  /* Centro de la flor */
-  .rosa__centro {
+}
+
+/* Centro de la flor */
+.rosa__centro {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -96,86 +96,86 @@ body {
     top: 35px;
     left: 35px;
     box-shadow: 0 0 10px #fdd835;
-  }
-  
-  /* Luces */
-  .rosa__luz {
+}
+
+/* Luces */
+.rosa__luz {
     position: absolute;
     width: 10px;
     height: 10px;
     background: #ff0606;
     border-radius: 50%;
     animation: parpadeo 2s infinite alternate;
-  }
-  
-  @keyframes parpadeo {
+}
+
+@keyframes parpadeo {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; }
-  }
-  
-  /* Tallos */
-  .rosa__tallo {
+}
+
+/* Tallos */
+.rosa__tallo {
     width: 4px;
     height: 120px;
     background: linear-gradient(to bottom, #558b2f, #33691e);
     margin: 0 auto;
     position: relative;
     z-index: -1;
-  }
-  
-  /* Hojas */
-  .rosa__hoja {
+}
+
+/* Hojas */
+.rosa__hoja {
     position: absolute;
     width: 20px;
     height: 10px;
     background: #66bb6a;
     border-radius: 10px 0 10px 0;
     transform: rotate(45deg);
-  }
-  
-  .rosa__hoja--1 { left: -10px; top: 20px; }
-  .rosa__hoja--2 { left: 10px; top: 40px; }
-  .rosa__hoja--3 { left: -10px; top: 60px; }
-  .rosa__hoja--4 { left: 10px; top: 80px; }
-  
-  /* Pasto */
-  .rosa__cesped {
+}
+
+.rosa__hoja--1 { left: -10px; top: 20px; }
+.rosa__hoja--2 { left: 10px; top: 40px; }
+.rosa__hoja--3 { left: -10px; top: 60px; }
+.rosa__hoja--4 { left: 10px; top: 80px; }
+
+/* Pasto */
+.rosa__cesped {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 20px;
     background: #2e7d32;
-  }
-  
-  .rosa__cesped__hoja {
+}
+
+.rosa__cesped__hoja {
     position: absolute;
     width: 10px;
     height: 20px;
     background: #43a047;
     border-radius: 5px;
     transform: rotate(30deg);
-  }
-  
-  /* Animaciones de crecimiento */
-  .rosa__crecimiento {
+}
+
+/* Animaciones de crecimiento */
+.rosa__crecimiento {
     animation: crecer 3s forwards;
     animation-delay: var(--d);
     opacity: 0;
-  }
-  
-  @keyframes crecer {
+}
+
+@keyframes crecer {
     from {
-      transform: scaleY(0);
-      opacity: 0;
+        transform: scaleY(0);
+        opacity: 0;
     }
     to {
-      transform: scaleY(1);
-      opacity: 1;
+        transform: scaleY(1);
+        opacity: 1;
     }
-  }
-  
-  /* Letras */
-  .lyrics {
+}
+
+/* Letras */ 
+.lyrics {
     position: absolute;
     top: 10%;
     left: 5%;
@@ -183,4 +183,4 @@ body {
     font-size: 1rem;
     max-width: 300px;
     text-shadow: 1px 1px 2px #000;
-  }
+}
