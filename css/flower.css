@@ -184,3 +184,32 @@ body {
     max-width: 300px;
     text-shadow: 1px 1px 2px #000;
 }
+
+.contentbutton {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.btn {
+    margin: auto;
+    background-color: #222;
+    border: 2px solid #ff00b3;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: #ff00b3;
+    box-shadow: 0 0 10px #ff00b3, 0 0 20px #ff00b3 inset;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #d41515;
+    color: #890fd5;
+    box-shadow: 0 0 20px #d41515, 0 0 30px #d41515 inset;
+}
+
