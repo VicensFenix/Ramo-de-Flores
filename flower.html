@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/flower.css" />
+    <link rel="icon" href="img/flower.ico" type="image/x-icon" />
+    <title>Rosas Amarillas</title>
+</head>
+<body class="container">
+    <audio src="sound/loveSalsa.mp4" autoplay></audio>
+    
+    <div id="lyrics" class="lyrics"></div>
+
+    <h1 class="titulo">
+        Eres tan hermosa como estas rosas, tan unica como una flor de Jazmín <br><br>
+        Mi princesita hermosa.
+    </h1>
+
+    <div class="contentbutton">
+        <button class="btn" onclick="reproducirAudio()">Reproducir de nuevo</button>
+    </div>
+
+    <div class="night"></div>
+
+    <div class="rosas">
+        <div class="rosa rosa--1">
+            <div class="rosa__petalos rosa__petalos--1">
+            <div class="rosa__petalo rosa__petalo--1"></div>
+            <div class="rosa__petalo rosa__petalo--2"></div>
+            <div class="rosa__petalo rosa__petalo--3"></div>
+            <div class="rosa__petalo rosa__petalo--4"></div>
+            <div class="rosa__centro"></div>
+
+            <div class="rosa__luz rosa__luz--1"></div>
+            <div class="rosa__luz rosa__luz--2"></div>
+            <div class="rosa__luz rosa__luz--3"></div>
+            <div class="rosa__luz rosa__luz--4"></div>
+            <div class="rosa__luz rosa__luz--5"></div>
+            <div class="rosa__luz rosa__luz--6"></div>
+            <div class="rosa__luz rosa__luz--7"></div>
+            <div class="rosa__luz rosa__luz--8"></div>
+        </div>
+        <div class="rosa__tallo">
+            <div class="rosa__hoja rosa__hoja--1"></div>
+            <div class="rosa__hoja rosa__hoja--2"></div>
+            <div class="rosa__hoja rosa__hoja--3"></div>
+            <div class="rosa__hoja rosa__hoja--4"></div>
+            <div class="rosa__hoja rosa__hoja--5"></div>
+            <div class="rosa__hoja rosa__hoja--6"></div>
+        </div>
+    </div>
+
+    <div class="rosa rosa--2">
+        <div class="rosa__petalos rosa__petalos--2">
+            <div class="rosa__petalo rosa__petalo--1"></div>
+            <div class="rosa__petalo rosa__petalo--2"></div>
+            <div class="rosa__petalo rosa__petalo--3"></div>
+            <div class="rosa__petalo rosa__petalo--4"></div>
+            <div class="rosa__centro"></div>
+
+            <div class="rosa__luz rosa__luz--1"></div>
+            <div class="rosa__luz rosa__luz--2"></div>
+            <div class="rosa__luz rosa__luz--3"></div>
+            <div class="rosa__luz rosa__luz--4"></div>
+            <div class="rosa__luz rosa__luz--5"></div>
+            <div class="rosa__luz rosa__luz--6"></div>
+            <div class="rosa__luz rosa__luz--7"></div>
+            <div class="rosa__luz rosa__luz--8"></div>
+        </div>
+        <div class="rosa__tallo">
+            <div class="rosa__hoja rosa__hoja--1"></div>
+            <div class="rosa__hoja rosa__hoja--2"></div>
+            <div class="rosa__hoja rosa__hoja--3"></div>
+            <div class="rosa__hoja rosa__hoja--4"></div>
+        </div>
+    </div>
+
+    <div class="rosa rosa--3">
+        <div class="rosa__petalos rosa__petalos--3">
+            <div class="rosa__petalo rosa__petalo--1"></div>
+            <div class="rosa__petalo rosa__petalo--2"></div>
+            <div class="rosa__petalo rosa__petalo--3"></div>
+            <div class="rosa__petalo rosa__petalo--4"></div>
+            <div class="rosa__centro"></div>
+
+        <div class="rosa__luz rosa__luz--1"></div>
+            <div class="rosa__luz rosa__luz--2"></div>
+            <div class="rosa__luz rosa__luz--3"></div>
+            <div class="rosa__luz rosa__luz--4"></div>
+            <div class="rosa__luz rosa__luz--5"></div>
+            <div class="rosa__luz rosa__luz--6"></div>
+            <div class="rosa__luz rosa__luz--7"></div>
+            <div class="rosa__luz rosa__luz--8"></div>
+        </div>
+        <div class="rosa__tallo">
+            <div class="rosa__hoja rosa__hoja--1"></div>
+            <div class="rosa__hoja rosa__hoja--2"></div>
+            <div class="rosa__hoja rosa__hoja--3"></div>
+            <div class="rosa__hoja rosa__hoja--4"></div>
+        </div>
+    </div>
+
+    <div class="rosa__crecimiento" style="--d: 1.2s">
+        <div class="rosa__tallo-largo">
+            <div class="rosa__tallo-largo__superior"></div>
+            <div class="rosa__tallo-largo__inferior"></div>
+        </div>
+    </div>
+
+    <div class="cesped-creciendo">
+        <div class="rosa__cesped rosa__cesped--1">
+            <div class="rosa__cesped--superior"></div>
+            <div class="rosa__cesped--inferior"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--1"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--2"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--3"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--4"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--5"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--6"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--7"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--8"></div>
+            <div class="rosa__cesped__fondo"></div>
+        </div>
+    </div>
+
+    <div class="cesped-creciendo">
+        <div class="rosa__cesped rosa__cesped--2">
+            <div class="rosa__cesped--superior"></div>
+            <div class="rosa__cesped--inferior"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--1"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--2"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--3"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--4"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--5"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--6"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--7"></div>
+            <div class="rosa__cesped__hoja rosa__cesped__hoja--8"></div>
+            <div class="rosa__cesped__fondo"></div>
+        </div>
+    </div>
+
+    <div class="rosa__crecimiento" style="--d: 2.4s">
+        <div class="rosa__rama-derecha rosa__rama-derecha--1">
+            <div class="hoja"></div>
+        </div>
+    </div>
+
+    <div class="rosa__crecimiento" style="--d: 2.8s">
+        <div class="rosa__rama-derecha rosa__rama-derecha--2">
+            <div class="hoja"></div>
+        </div>
+    </div>
+
+    <div class="rosa__crecimiento" style="--d: 2.8s">
+        <div class="rosa__rama-frontal">
+            <div class="rosa__rama-frontal__hoja-contenedor rosa__rama-frontal__hoja-contenedor--1">
+                <div class="rosa__rama-frontal__hoja"></div>
+            </div>
+            <div class="rosa__rama-frontal__hoja-contenedor rosa__rama-frontal__hoja-contenedor--2">
+                <div class="rosa__rama-frontal__hoja"></div>
+            </div>
+            <div class="rosa__rama-frontal__hoja-contenedor rosa__rama-frontal__hoja-contenedor--3">
+                <div class="rosa__rama-frontal__hoja"></div>
+            </div>
+            <div class="rosa__rama-frontal__hoja-contenedor rosa__rama-frontal__hoja-contenedor--4">
+                <div class="rosa__rama-frontal__hoja"></div>
+            </div>
+            <div class="rosa__rama-frontal__hoja-contenedor rosa__rama-frontal__hoja-contenedor--5">
+                <div class="rosa__rama-frontal__hoja"></div>
+            </div>
+                <div class="rosa__rama-frontal__hoja-contenedor rosa__rama-frontal__hoja-contenedor--6">
+            <div class="rosa__rama-frontal__hoja"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/runMusic.js"></script>
+
+</body>
+</html>
